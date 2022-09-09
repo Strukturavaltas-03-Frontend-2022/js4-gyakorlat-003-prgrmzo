@@ -29,7 +29,7 @@
 const getCustomers = async (url = "") => {
   try {
     const response = await fetch(url);
-    const customers = response.json();
+    const customers = await response.json();
     return customers;
   } catch (error) {
     console.error(error);
